@@ -1,12 +1,7 @@
 NAME=server
-REPO=ysli/apache
-BRANCH=$(shell git rev-parse --abbrev-ref HEAD)
+REPO=ysli/apache:$(shell git rev-parse --abbrev-ref HEAD)
 IMAGES=$(shell docker images $(REPO) -q)
 PORT?=80
-
-ifneq ($(BRANCH), master)
-        REPO:=$(REPO):$(BRANCH)
-endif
 
 all: clean
 	docker build -t $(REPO) .
