@@ -3,7 +3,7 @@
 | 1 | Core | Default handler returned too early
 | 2 | HTTP | Flip bit in If-None-Match
 | 3 | DAV | Add one byte to PUT request
-| 4 | Core | Pass empty bucket brigate
+| 4 | Core | Skip passing brigate
 | 5 | DAV | GET handler upon PUT request
 | 6 | Core | Skip 404 Not Found
 | 7 | DAV FS | Write off by 1 byte
